@@ -9,8 +9,8 @@
     "vuepress": "^1.9.7"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "rm -rf pages && vuepress build docs && mv docs/.vuepress/dist pages"
   },
   "repository": "https://github.com/satumjs/website.git",
   "author": "valleykid <valleykiddy@gmail.com>",
