@@ -8,7 +8,13 @@ sidebarDepth: 2
 
 [https://www.npmjs.com/package/@satumjs/simple-midwares](https://www.npmjs.com/package/@satumjs/simple-midwares)
 
-一些简单中间件的实现集合。包含了对**缓存、沙箱、css 隔离、获取挂载 dom、路由协调器**的实现。
+一些简单中间件的实现集合。包含了对**缓存、沙箱、css 隔离、获取挂载 dom、路由协调**的实现。
+
+- `simpleCacheMidware` 简单的文件内容缓存，会缓存获取过的 js/css 文件内容
+- `simpleSandboxMidware` 简单的沙箱，会执行微应用的脚本
+- `simpleCssScopeMidware` 简单的 css scope 实现，会处理 css 规则增加 scope
+- `mountNodeMidware` 获取挂载 dom 节点，会响应 dom 变化，直到成功获取
+- `interceptorMidware` vue/react 路由协调，会为不同的微应用分发不同的路径
 
 ## @satumjs/midware-single-spa
 
@@ -24,4 +30,20 @@ sidebarDepth: 2
 
 ## @satumjs/midware-qiankun-sandbox
 
-comming soon...
+基于 `qiankun` 包实现，完全借用了 `qiankun` 的沙箱能力。
+
+## @satumjs/midware-sandbox
+
+基于 iframe 实现的沙箱，支持**严格的脚本运行环境**，会把挂载节点视作虚拟 BODY，脚本里**对 dom 元素的操作会严格限制在虚拟 BODY 范围内**。并且多实例场景下，**不阉割沙箱能力无缝支持 Vite**。
+
+## @satumjs/midware-microcode
+
+更强大的运行时源码改写能力。
+
+## @satumjs/midware-cachecode
+
+更强大的源码缓存能力。
+
+## @satumjs/midware-interceptor
+
+更强大的路由协调能力。

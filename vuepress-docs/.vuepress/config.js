@@ -44,6 +44,16 @@ module.exports = {
           { title: '快速开始', path: '/guide/getting-started' },
         ],
       }],
+      '/api': [{
+        title: 'API',
+        collapsable: false,
+        children: [],
+      }],
+      '/config': [{
+        title: '配置',
+        collapsable: false,
+        children: [],
+      }],
       '/midware': [{
         title: '中间件',
         collapsable: false,
@@ -52,6 +62,11 @@ module.exports = {
           { title: '流程节点', path: '/midware/flow-nodes' },
           { title: '官方中间件', path: '/midware/offical-midwares' },
         ],
+      }],
+      '/plugin': [{
+        title: '插件',
+        collapsable: false,
+        children: [],
       }],
     },
   },
