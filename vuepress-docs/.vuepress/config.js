@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Satumjs',
   description: 'A core of micro-frontends framework',
+  base: '/website/',
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
