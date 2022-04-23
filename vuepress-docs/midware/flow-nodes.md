@@ -9,6 +9,7 @@ sidebarDepth: 2
 - 初始设置
 
 ```bash
+MidwareName.microApp # 定义远程获取微前端配置
 MidwareName.start # 自定义微前端的 start，如使用 single-spa
 ```
 
@@ -23,7 +24,7 @@ MidwareName.statusChange # actor 对象的状态变化
 ```bash
 MidwareName.urlOption # 处理微应用静态资源 url 的跨域白名单、跨域规则等
 MidwareName.url # 处理微应用静态资源 url
-MidwareName.proxyEntry # 处理微应用的本地代理
+MidwareName.proxyEntry # 处理微应用的本地代理，或获取代理平台的数据
 MidwareName.code # 处理微应用的静态资源 source
 MidwareName.cache # 处理静态资源的缓存
 MidwareName.Sandbox # 设置沙箱，若不设置会有一个超简单的内置沙箱
@@ -42,15 +43,6 @@ MidwareName.domChange # 挂载点下的 dom 发生增删改、id/class 发生变
 > Typescript types 定义
 
 ```ts
-enum MicroAppStage {
-  NOT_ACTIVED = 'NOT_ACTIVED',
-  ACTIVING = 'ACTIVING',
-  ACTIVED = 'ACTIVED',
-  NOT_RENDERED = 'NOT_RENDERED',
-  RENDERING = 'RENDERING',
-  RENDERED = 'RENDERED',
-}
-
 type IgnoreFileFn = (url: string, appName?: string) => boolean;
 type IgnoreFile = string | RegExp | IgnoreFileFn;
 type ProcessUrlOption = {
@@ -73,6 +65,8 @@ type MountContainer = HTMLElement | string;
 - 支持设置多个中间件
 
 ```ts
+microApp(microAppConfigs: TMicroApp[], remoteUrl?: string): TMicroApp[] | Promise<TMicroApp[]>
+
 statusChange(next: MicroAppStage, current: MicroAppStage): MicroAppStage
 domChange(appName: string, mountNode: HTMLElement, records: MutationRecord[]): string | Promise<string>
 

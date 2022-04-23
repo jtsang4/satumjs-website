@@ -31,7 +31,7 @@ module.exports = {
     nav: [
       { text: '指南', link: '/guide/' },
       { text: 'API', link: '/api/' },
-      { text: '配置', link: '/config/' },
+      // { text: '配置', link: '/config/' },
       { text: '中间件', link: '/midware/' },
       { text: '插件', link: '/plugin/' },
     ],
@@ -42,18 +42,22 @@ module.exports = {
         children: [
           { title: '介绍', path: '/guide/' },
           { title: '快速开始', path: '/guide/getting-started' },
+          { title: '架构体系', path: '/guide/architecture-map' },
         ],
       }],
       '/api': [{
         title: 'API',
         collapsable: false,
-        children: [],
+        children: [
+          { title: 'API 说明', path: '/api/' },
+          { title: '注意事项', path: '/api/attention' },
+        ],
       }],
-      '/config': [{
+      /* '/config': [{
         title: '配置',
         collapsable: false,
         children: [],
-      }],
+      }], */
       '/midware': [{
         title: '中间件',
         collapsable: false,
@@ -66,7 +70,9 @@ module.exports = {
       '/plugin': [{
         title: '插件',
         collapsable: false,
-        children: [],
+        children: [
+          { title: '介绍', path: '/plugin/' },
+        ],
       }],
     },
   },

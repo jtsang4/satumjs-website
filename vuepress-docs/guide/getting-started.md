@@ -1,6 +1,5 @@
 ---
 sidebarDepth: 2
-# sidebar: auto
 ---
 
 # 快速开始

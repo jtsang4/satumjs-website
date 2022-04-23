@@ -47,3 +47,7 @@ sidebarDepth: 2
 ## @satumjs/midware-interceptor
 
 更强大的路由协调能力。
+
+## @satumjs/midware-wc-sandbox
+
+基于 webComponents 实现的沙箱。规划中...

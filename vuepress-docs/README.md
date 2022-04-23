@@ -2,7 +2,7 @@
 home: true
 heroImage: https://gw.alipayobjects.com/mdn/rms_edced6/afts/img/A*KfcRTYnC4eoAAAAAAAAAAAAAARQnAQ
 tagLine: satumjs
-tagline: 💫 面向未来更多场景的下一代微前端框架
+tagline: 💫 面向多实例集成、功能可插拔的微前端框架
 actionText: 快速上手 →
 actionLink: /guide/
 features:
@@ -43,10 +43,19 @@ register([
 start();
 ```
 
+或者使用**远程的微应用配置**，可以直接启动：
+
+```js {3}
+import { start } from '@satumjs/core';
+start({
+  remoteUrl: 'https://remote.test/micro-app-configs.json',
+});
+```
+
 更多示例请参考：[https://github.com/satumjs/examples](https://github.com/satumjs/examples)
 
 # 社区
 
 github：[https://github.com/satumjs](https://github.com/satumjs)
 
-其他渠道建设中，欢迎参与或关注~
+其他渠道建设中，欢迎关注或参与~
