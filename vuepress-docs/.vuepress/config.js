@@ -8,7 +8,7 @@ module.exports = {
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['link', { href: 'https://gw.alipayobjects.com/mdn/rms_edced6/afts/img/A*KfcRTYnC4eoAAAAAAAAAAAAAARQnAQ', type: 'image/x-icon', rel: 'shortcut icon' }]
   ],
-  locales: {
+  /* locales: {
     '/': {
       lang: 'zh-CN',
       title: 'Satumjs',
@@ -21,7 +21,7 @@ module.exports = {
       description: 'Next-generation microf2e framework for more scenarios in the future',
       selectText: 'Languages',
     },
-  },
+  }, */
   themeConfig: {
     repo: 'satumjs/website',
     editLinks: true,
@@ -79,5 +79,6 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    'image',
   ],
 }

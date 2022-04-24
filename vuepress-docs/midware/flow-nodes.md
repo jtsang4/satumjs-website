@@ -40,6 +40,7 @@ MidwareName.domChange # 挂载点下的 dom 发生增删改、id/class 发生变
 
 ## 按支持『单个/多个』划分
 
+<!--
 > Typescript types 定义
 
 ```ts
@@ -60,22 +61,38 @@ type CacheItem = {
 
 type RootNodeType = HTMLElement | null;
 type MountContainer = HTMLElement | string;
-```
+``` -->
 
 - 支持设置多个中间件
 
 ```ts
-microApp(microAppConfigs: TMicroApp[], remoteUrl?: string): TMicroApp[] | Promise<TMicroApp[]>
+microApp(
+  microAppConfigs: TMicroApp[],
+  remoteUrl?: string,
+): TMicroApp[] | Promise<TMicroApp[]>
 
 statusChange(next: MicroAppStage, current: MicroAppStage): MicroAppStage
-domChange(appName: string, mountNode: HTMLElement, records: MutationRecord[]): string | Promise<string>
+
+domChange(
+  appName: string,
+  mountNode: HTMLElement,
+  records: MutationRecord[],
+): string | Promise<string>
 
 url(url: string, option: ProcessUrlOption): string | Promise<string>
 code(code: string, url: string): string | Promise<string>
 cache(data: string | CacheItem): CacheItem | Promise<CacheItem>
 
-root(root: RootNodeType, container: MountContainer, delay?: number): RootNodeType | Promise<RootNodeType>
-route(routeHistory: RouteHistory, appName: string): RouteHistory | Promise<RouteHistory>
+root(
+  root: RootNodeType,
+  container: MountContainer,
+  delay?: number,
+): RootNodeType | Promise<RootNodeType>
+
+route(
+  routeHistory: RouteHistory,
+  appName: string,
+): RouteHistory | Promise<RouteHistory>
 
 type RouteHistory = { [key: string]: any };
 ```
@@ -85,6 +102,6 @@ type RouteHistory = { [key: string]: any };
 ```ts
 urlOption: ProcessUrlOption | ((url: string) => ProcessUrlOption)
 Sandbox: ISandbox
-proxyEntry(entry: IMicroApp['entry'], appName: string): IMicroApp['entry']
+proxyEntry(entry: Entry, appName: string): Entry | Promise<Entry>
 start(...args: any[]): void
 ```
