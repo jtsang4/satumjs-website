@@ -131,7 +131,7 @@ type MidwareSystem {
     appName?: string
   ): Promise<any>;
   event: EventFn; // 绑定插件
-  trigger(...args: any[]): boolean; // 触发插件
+  fire: TriggerFn; // 触发插件
   options: KeyObject<any>; // 中间件使用时，来自用户的配置项
 }
 type MidwareFn = (
@@ -247,7 +247,8 @@ enum EndType {
 
 ## 属性
 
-- `fakeBodyTag` = "x-satum-micro"
-- `actorTagAttrAppName` = "data-microapp"
-- `actorTagAttrId` = "data-actor-id"
-- `defaultCrossRuleLabel` = "{URL}"
+- `fakeTagName` = "x-satum-micro"
+- `fakeWrapTagName` = 'x-body'
+- `fakeTagWithAppName` = "data-micro-app"
+- `fakeTagWithActorId` = "data-actor-id"
+- `crossRuleLabel` = "{URL}"

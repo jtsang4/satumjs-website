@@ -24,7 +24,7 @@ sidebarDepth: 2
 - `use()`：使用其他中间件
 - `fileExtName()`：获取文件扩展名
 - `fileFetch()`：扩展后的 fetch 函数
-- `event()`/`trigger()`：可在中间件中提供自定义插件，或响应其他插件
+- `event()`/`fire()`：可在中间件中提供自定义插件，或响应其他插件
 - `options`：中间件使用时，来自用户的配置项
 
 > `@satumjs/simple-midwares > simpleSandboxMidware`、`@satumjs/simple-midwares > mountNodeMidware` 和 `@satumjs/midware-single-spa`，强烈建议成为项目标配。
