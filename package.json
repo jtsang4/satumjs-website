@@ -1,13 +1,13 @@
 {
   "name": "website",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "an offical website for satumjs",
   "main": "index.js",
   "dependencies": {
     "@vuepress/plugin-back-to-top": "^1.9.7",
     "@vuepress/plugin-medium-zoom": "^1.9.7",
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-image": "^1.0.4"
+    "markdown-it-imsize": "^2.0.1",
+    "vuepress": "^1.9.7"
   },
   "scripts": {
     "dev": "vuepress dev vuepress-docs",

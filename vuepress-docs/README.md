@@ -58,4 +58,8 @@ start({
 
 github：[https://github.com/satumjs](https://github.com/satumjs)
 
+| 微信群                                  | 钉群                                     |
+| --------------------------------------- | ---------------------------------------- |
+| ![](./public/webchat0424.jpeg =200x229) | ![](./public/dingtalk0424.jpeg =200x202) |
+
 其他渠道建设中，欢迎关注或参与~

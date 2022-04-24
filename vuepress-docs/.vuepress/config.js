@@ -23,7 +23,8 @@ module.exports = {
     },
   }, */
   themeConfig: {
-    repo: 'satumjs/website',
+    repo: 'satumjs',
+    docsRepo: 'satumjs/website',
     editLinks: true,
     docsDir: 'vuepress-docs',
     editLinkText: '在 GitHub 上编辑此页',
@@ -42,6 +43,7 @@ module.exports = {
         children: [
           { title: '介绍', path: '/guide/' },
           { title: '快速开始', path: '/guide/getting-started' },
+          { title: '更多示例', path: '/guide/more-examples' },
           { title: '架构体系', path: '/guide/architecture-map' },
         ],
       }],
@@ -79,6 +81,10 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    'image',
   ],
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-imsize'));
+    },
+  },
 }
