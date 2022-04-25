@@ -9,8 +9,10 @@ module.exports = {
     ['link', { href: 'https://gw.alipayobjects.com/mdn/rms_edced6/afts/img/A*KfcRTYnC4eoAAAAAAAAAAAAAARQnAQ', type: 'image/x-icon', rel: 'shortcut icon' }],
     // 插入百度统计代码
     ['script', {}, `
+      var ignoreDomains = ['localhost', '127.0.0.1', '0.0.0.0'];
       var _hmt = _hmt || [];
       (function() {
+        if (ignoreDomains.some(function(domain) { return location.hostname.includes(domain) })) return;
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?ff1ee4d80feed24efd13ed94ef4722fe";
         var s = document.getElementsByTagName("script")[0]; 
