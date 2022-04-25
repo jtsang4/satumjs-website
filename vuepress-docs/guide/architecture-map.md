@@ -19,7 +19,7 @@ sidebarDepth: 2
 
 ## 工程生态视角
 
-![](https://gw.alipayobjects.com/mdn/rms_d65887/afts/img/A*4bwJRKgq7IMAAAAAAAAAAAAAARQnAQ =560x399)
+![](https://gw.alipayobjects.com/mdn/rms_d65887/afts/img/A*l6xIQ7bZEgYAAAAAAAAAAAAAARQnAQ =560x399)
 
 几点说明：
 
@@ -27,3 +27,4 @@ sidebarDepth: 2
 - `代理/调试平台`，可基于 `MidwareName.proxyEntry` 实现。既可以用本地缓存实现，也可以使用远程的代理配置服务。从而做到微应用开发时，及时看到集成后的效果；
 - `跨域服务`，自行搭建服务，然后基于 `MidwareName.urlOption` 中的 `crossRule` 接入；
 - `可视化搭建平台`，目前流行的可拖拽创建页面，也可以轻松集成到微前端体系中；
+- `物料市场`，最通常的做法是代码复制或组件引入子应用。但此处有个“畅想”😀，物料站点把物料组件独立成一个个 URL，既可以是示例展示平台，又可以作为“区块微应用”集成到项目中，进而“打通” Vue/React/Angular 组件共享；
