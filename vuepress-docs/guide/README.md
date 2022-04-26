@@ -17,7 +17,7 @@ Satum，中文可发音为『萨图』，是一款面向多实例集成、功能
 
 `single-spa` 称得上是微前端的开山鼻祖，它通过监听 url change 事件，在路由发生变化时，按照配置好的匹配规则激活子应用，进而渲染到页面上。这个思路也是目前实现微前端的主流方式。另外，它要求子应用需要暴露四个方法：`bootstrap`、`mount`、`unmount`、`update`(该方法可选)，分别对应初始化、渲染、卸载和更新，这也意味着如果某个应用要集成进微前端需要对入口文件进行修改和适配。因为 `qiankun` 是基于 `single-spa` 做了进一步封装，所以这些特点也被 `qiankun` “继承”下来，而 `qiankun` 也依赖 `umijs`/`webpack` 一些配置。
 
-`single-spa`/`qiankun` 面向的是**单实例模式**的微前端场景，即一个 url 下只能激活一个子应用(虽然 qiankun 也支持了所谓的多应用激活，但明确表示[不能同时显示多个依赖于路由的微应用](https://qiankun.umijs.org/zh/faq/#%E5%A6%82%E4%BD%95%E5%90%8C%E6%97%B6%E6%BF%80%E6%B4%BB%E4%B8%A4%E4%B8%AA%E5%BE%AE%E5%BA%94%E7%94%A8%EF%BC%9F))。`Satum` 并没有沿用 `single-spa` 的思路，但是兼容 `single-spa`/`qiankun` 的配置。
+`single-spa`/`qiankun` 面向的是**单实例模式**的微前端场景，即一个 url 下只能激活一个子应用(虽然 qiankun 也支持了所谓的多应用激活，但明确表示[不能同时显示多个依赖于路由的微应用](https://qiankun.umijs.org/zh/faq/#%E5%A6%82%E4%BD%95%E5%90%8C%E6%97%B6%E6%BF%80%E6%B4%BB%E4%B8%A4%E4%B8%AA%E5%BE%AE%E5%BA%94%E7%94%A8%EF%BC%9F))。`Satum` 并没有受制于 `single-spa` 的局限，但是兼容 `single-spa`/`qiankun` 的配置。
 
 `Satum` 旨在解决**多实例模式**的微前端场景，内置了多个微应用被同时激活时，该如何**协调加/卸载、数据依赖、组件共享及渲染顺序**。而且它支持中间件&插件机制，可以很方便自定义沙箱、路由协调、缓存等。通过不同的中间件&插件组合，可以**定制**适合自己团队的**微前端架构体系**。
 

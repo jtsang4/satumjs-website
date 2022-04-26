@@ -15,7 +15,7 @@ sidebarDepth: 2
 - `布局微应用`：如果微应用的激活规则中包含 `layout`，则以路径获得的其他微应用；
 - `区块微应用`：如果微应用的激活规则中包含 `blocks`，则以路径获得的其他微应用；
 - `数据共享`：目前数据共享由 `shareProps` 配置，且需要通过 window 对象。其他共享方式规划中；
-- `路由协调`：依赖中间件 `@satumjs/simple-midwares > interceptorMidware` 或者 `@satumjs/midware-interceptor`；
+- `路由协调`：依赖中间件 `@satumjs/midware-microcode` 及 `@satumjs/simple-midwares > interceptorMidware` 或者 `@satumjs/midware-interceptor`；
 
 ## 工程生态视角
 
@@ -27,4 +27,4 @@ sidebarDepth: 2
 - `代理/调试平台`，可基于 `MidwareName.proxyEntry` 实现。既可以用本地缓存实现，也可以使用远程的代理配置服务。从而做到微应用开发时，及时看到集成后的效果；
 - `跨域服务`，自行搭建服务，然后基于 `MidwareName.urlOption` 中的 `crossRule` 接入；
 - `可视化搭建平台`，目前流行的可拖拽创建页面，也可以轻松集成到微前端体系中；
-- `物料市场`，最通常的做法是代码复制或组件引入子应用。但此处有个“畅想”😀，物料站点把物料组件独立成一个个 URL，既可以是示例展示平台，又可以作为“区块微应用”集成到项目中，进而“打通” Vue/React/Angular 组件共享；
+- `物料市场`，较通常的做法是代码复制或组件引入微应用。但此处有个“畅想”😀，物料站点把物料组件独立成一个个 URL，既可以是示例展示平台，又可以作为“区块微应用”集成到项目中，进而“打通” Vue/React/Angular 组件共享；
