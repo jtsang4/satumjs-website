@@ -30,21 +30,31 @@ sidebarDepth: 2
 
 ## @satumjs/midware-qiankun-sandbox
 
+[https://www.npmjs.com/package/@satumjs/midware-qiankun-sandbox](https://www.npmjs.com/package/@satumjs/midware-qiankun-sandbox)
+
 基于 `qiankun` 包实现，完全借用了 `qiankun` 的沙箱能力。
 
 ## @satumjs/midware-sandbox
+
+[https://www.npmjs.com/package/@satumjs/midware-sandbox](https://www.npmjs.com/package/@satumjs/midware-sandbox)
 
 基于 iframe 实现的沙箱，支持**严格的脚本运行环境**，会把挂载节点视作虚拟 BODY，脚本里**对 dom 元素的操作会严格限制在虚拟 BODY 范围内**。并且多实例场景下，**不阉割沙箱能力无缝支持 Vite**。
 
 ## @satumjs/midware-microcode
 
+[https://www.npmjs.com/package/@satumjs/midware-microcode](https://www.npmjs.com/package/@satumjs/midware-microcode)
+
 更强大的运行时源码改写能力。
 
 ## @satumjs/midware-cachecode
 
+[https://www.npmjs.com/package/@satumjs/midware-cachecode](https://www.npmjs.com/package/@satumjs/midware-cachecode)
+
 更强大的源码缓存能力。
 
 ## @satumjs/midware-interceptor
+
+[https://www.npmjs.com/package/@satumjs/midware-interceptor](https://www.npmjs.com/package/@satumjs/midware-interceptor)
 
 更强大的路由协调能力。
 

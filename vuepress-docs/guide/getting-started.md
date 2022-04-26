@@ -51,7 +51,15 @@ $ mkdir src && touch src/index.html src/index.js
 
 ```js
 // @ts-check
-import { register, start } from '@satumjs/core';
+import { register, start, MidwareName, crossRuleLabel } from '@satumjs/core';
+
+// 设置跨域服务，或自行控制微应用跨域
+use((sys, apps, next) => {
+  sys.set(MidwareName.urlOption, {
+    crossRule: `https://bird.ioliu.cn/v2?url=${crossRuleLabel}`,
+  });
+  next();
+});
 
 register({
   name: 'ucar',
@@ -89,9 +97,17 @@ $ yarn start
 
 可以看到虽然渲染出来了，但图片是相对路径，导致很多是“破图”。我们尝试一下`自定义中间件`，把图片路径补充完整。需要改写 `index.js` 文件：
 
-```js {2,14-27}
+```js {2,22-35}
 // @ts-check
 import { register, start, use, MidwareName } from '@satumjs/core';
+
+// 设置跨域服务，或自行控制微应用跨域
+use((sys, apps, next) => {
+  sys.set(MidwareName.urlOption, {
+    crossRule: `https://bird.ioliu.cn/v2?url=${crossRuleLabel}`,
+  });
+  next();
+});
 
 register({
   name: 'ucar',
