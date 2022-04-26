@@ -6,7 +6,7 @@ sidebarDepth: 2
 
 ## 内核架构视角
 
-![](https://gw.alipayobjects.com/mdn/rms_d65887/afts/img/A*iU1MSJQlEo0AAAAAAAAAAAAAARQnAQ =450x495)
+![](https://gw.alipayobjects.com/mdn/rms_d65887/afts/img/A*uErEQJtl-wMAAAAAAAAAAAAAARQnAQ =450x495)
 
 几点说明：
 
