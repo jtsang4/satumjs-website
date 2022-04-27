@@ -12,6 +12,12 @@ features:
     details: 只需要引入 @satumjs/core，配置微应用的激活规则后即可看到效果。
   - title: 集成能力强
     details: 支持所有的外部应用无需任何适配代码，就能无缝地集成。
+  - title: 支持多实例
+    details: 内置激活规则计算，可以同时激活多个实例，甚至是多条“微应用依赖链”。
+  - title: 无缝支持 Vite
+    details: 官方提供的沙箱中间件，不阉割沙箱能力无缝支持 Vite。
+  - title: 共享机制灵活
+    details: UI 层面支持 layout/区块/组件共享，数据逻辑层面支持跨微应用共享。
 
 footer: Satumjs ❤️ you
 ---
