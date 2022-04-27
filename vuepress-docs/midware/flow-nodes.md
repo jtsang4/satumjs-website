@@ -48,7 +48,7 @@ type IgnoreFileFn = (url: string, appName?: string) => boolean;
 type IgnoreFile = string | RegExp | IgnoreFileFn;
 type ProcessUrlOption = {
   whiteList?: IgnoreFile[];
-  crossRule?: string;
+  corsRule?: string;
   callback?(code: string, url?: string): string;
 };
 

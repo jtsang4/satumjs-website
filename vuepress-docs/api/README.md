@@ -251,4 +251,4 @@ enum EndType {
 - `fakeWrapTagName` = 'x-body'
 - `fakeTagWithAppName` = "data-micro-app"
 - `fakeTagWithActorId` = "data-actor-id"
-- `crossRuleLabel` = "{URL}"
+- `corsRuleLabel` = "{URL}"

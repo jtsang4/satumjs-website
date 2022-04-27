@@ -51,12 +51,12 @@ $ mkdir src && touch src/index.html src/index.js
 
 ```js
 // @ts-check
-import { register, start, MidwareName, crossRuleLabel } from '@satumjs/core';
+import { register, start, MidwareName, corsRuleLabel } from '@satumjs/core';
 
 // 设置跨域服务，或自行控制微应用跨域
 use((sys, apps, next) => {
   sys.set(MidwareName.urlOption, {
-    crossRule: `https://bird.ioliu.cn/v2?url=${crossRuleLabel}`,
+    corsRule: `https://bird.ioliu.cn/v2?url=${corsRuleLabel}`,
   });
   next();
 });
@@ -104,7 +104,7 @@ import { register, start, use, MidwareName } from '@satumjs/core';
 // 设置跨域服务，或自行控制微应用跨域
 use((sys, apps, next) => {
   sys.set(MidwareName.urlOption, {
-    crossRule: `https://bird.ioliu.cn/v2?url=${crossRuleLabel}`,
+    corsRule: `https://bird.ioliu.cn/v2?url=${corsRuleLabel}`,
   });
   next();
 });
