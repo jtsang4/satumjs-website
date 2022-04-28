@@ -43,7 +43,7 @@ module.exports = {
     lastUpdated: '更新时间',
     nav: [
       { text: '文档', link: '/guide/' },
-      { text: '更多示例', link: '/more-examples' },
+      { text: '示例', link: '/examples' },
     ],
     sidebar: {
       '/guide': [{
