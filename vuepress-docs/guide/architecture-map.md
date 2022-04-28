@@ -2,8 +2,6 @@
 sidebarDepth: 2
 ---
 
-# 架构体系说明
-
 ## 内核架构视角
 
 ![](https://gw.alipayobjects.com/mdn/rms_d65887/afts/img/A*uErEQJtl-wMAAAAAAAAAAAAAARQnAQ =450x495)

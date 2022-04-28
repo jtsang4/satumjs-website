@@ -42,50 +42,38 @@ module.exports = {
     editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: '更新时间',
     nav: [
-      { text: '指南', link: '/guide/' },
-      { text: 'API', link: '/api/' },
-      // { text: '配置', link: '/config/' },
-      { text: '中间件', link: '/midware/' },
-      { text: '插件', link: '/plugin/' },
+      { text: '文档', link: '/guide/' },
+      { text: '更多示例', link: '/more-examples' },
     ],
     sidebar: {
       '/guide': [{
         title: '指南',
         collapsable: false,
         children: [
-          { title: '介绍', path: '/guide/' },
-          { title: '快速开始', path: '/guide/getting-started' },
-          { title: '更多示例', path: '/guide/more-examples' },
+          { title: '简单介绍', path: '/guide/' },
+          { title: '快速上手', path: '/guide/getting-started' },
           { title: '架构体系', path: '/guide/architecture-map' },
         ],
-      }],
-      '/api': [{
+      }, {
         title: 'API',
         collapsable: false,
         children: [
-          { title: 'API 说明', path: '/api/' },
-          { title: '注意事项', path: '/api/attention' },
+          { title: 'API 说明', path: '/guide/api/' },
+          { title: '注意事项', path: '/guide/api/attention' },
         ],
-      }],
-      /* '/config': [{
-        title: '配置',
-        collapsable: false,
-        children: [],
-      }], */
-      '/midware': [{
+      }, {
         title: '中间件',
         collapsable: false,
         children: [
-          { title: '介绍', path: '/midware/' },
-          { title: '流程节点', path: '/midware/flow-nodes' },
-          { title: '官方中间件', path: '/midware/offical-midwares' },
+          { title: '快速了解', path: '/guide/midware/' },
+          { title: '流程节点', path: '/guide/midware/flow-nodes' },
+          { title: '官方中间件', path: '/guide/midware/offical-midwares' },
         ],
-      }],
-      '/plugin': [{
+      }, {
         title: '插件',
         collapsable: false,
         children: [
-          { title: '介绍', path: '/plugin/' },
+          { title: '文档说明', path: '/guide/plugin/' },
         ],
       }],
     },

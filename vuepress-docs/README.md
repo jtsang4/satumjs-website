@@ -4,7 +4,7 @@ heroImage: https://gw.alipayobjects.com/mdn/rms_edced6/afts/img/A*KfcRTYnC4eoAAA
 tagLine: satumjs
 tagline: 💫 面向多实例集成、功能可插拔的微前端框架
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /guide/getting-started
 features:
   - title: 微内核
     details: 支持中间件、插件机制，可以集成其他微前端框架，和做有意义的扩展。
