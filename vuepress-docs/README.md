@@ -17,7 +17,7 @@ features:
   - title: 无缝支持 Vite
     details: 官方提供的沙箱中间件，不阉割沙箱能力无缝支持 Vite。
   - title: 共享机制灵活
-    details: UI 层面支持 layout/区块/组件共享，数据逻辑层面支持跨微应用共享。
+    details: UI 上支持布局/区块/组件/三方库共享，数据逻辑层面支持跨微应用共享。
 
 footer: Satumjs ❤️ you
 ---
