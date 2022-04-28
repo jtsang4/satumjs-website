@@ -53,9 +53,8 @@ start();
 
 ```js {3}
 import { start } from '@satumjs/core';
-start({
-  remoteUrl: 'https://remote.test/micro-app-configs.json',
-});
+
+start({ remoteUrl: 'https://example.com/configs.json' });
 ```
 
 更多示例请参考：[https://github.com/satumjs/examples](https://github.com/satumjs/examples)
