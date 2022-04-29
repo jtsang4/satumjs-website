@@ -34,16 +34,11 @@ $ yarn add @satumjs/core  # or npm i @satumjs/core -S
 import { register, start } from '@satumjs/core';
 
 // 注册微应用
-register([
-  {
-    name: 'reactApp',
-    entry: 'http://localhost:8000',
-    rules: {
-      rule: '/',
-      container: '#mountNode',
-    },
-  },
-]);
+register({
+  name: 'reactApp',
+  entry: 'http://localhost:8000',
+  rules: { rule: '/', container: '#mountNode' },
+});
 
 // 启动
 start();
