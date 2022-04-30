@@ -49,7 +49,7 @@ $ mkdir src && touch src/index.html src/index.js
 
 ```js
 // @ts-check
-import { register, start, MidwareName, corsRuleLabel } from '@satumjs/core';
+import { register, start, use, MidwareName, corsRuleLabel } from "@satumjs/core";
 
 // 设置跨域服务，或自行控制微应用跨域
 use((sys, apps, next) => {
@@ -60,13 +60,10 @@ use((sys, apps, next) => {
 });
 
 register({
-  name: 'ucar',
+  name: "ucar",
   // 以这个站点作为老网站为例：美国大气研究中心-关于气温，1995年12月进行最后的更新
-  entry: 'http://eo.ucar.edu/skymath/tmp2.html',
-  rules: {
-    rule: '/',
-    container: '#mountNode',
-  },
+  entry: "http://eo.ucar.edu/skymath/tmp2.html",
+  rules: { rule: "/", container: "#mountNode" },
 });
 
 start();
@@ -95,9 +92,9 @@ $ yarn start
 
 可以看到虽然渲染出来了，但图片是相对路径，导致很多是“破图”。我们尝试一下`自定义中间件`，把图片路径补充完整。需要改写 `index.js` 文件：
 
-```js {2,22-35}
+```js {19-30}
 // @ts-check
-import { register, start, use, MidwareName } from '@satumjs/core';
+import { register, start, use, MidwareName, corsRuleLabel } from "@satumjs/core";
 
 // 设置跨域服务，或自行控制微应用跨域
 use((sys, apps, next) => {
@@ -108,24 +105,19 @@ use((sys, apps, next) => {
 });
 
 register({
-  name: 'ucar',
+  name: "ucar",
   // 以这个站点作为老网站为例：美国大气研究中心-关于气温，1995年12月进行最后的更新
-  entry: 'http://eo.ucar.edu/skymath/tmp2.html',
-  rules: {
-    rule: '/',
-    container: '#mountNode',
-  },
+  entry: "http://eo.ucar.edu/skymath/tmp2.html",
+  rules: { rule: "/", container: "#mountNode" },
 });
 
 use((sys, apps, next) => {
   sys.set(MidwareName.domChange, (appName, mountNode) => {
-    mountNode.querySelectorAll('img').forEach((el) => {
-      const src = el.getAttribute('src');
+    mountNode.querySelectorAll("img").forEach((el) => {
+      const src = el.getAttribute("src");
       const { assetPublicPath } = apps.find((item) => item.name === appName);
-      const newSrc = /^(https?\:)?\/\//.test(src)
-        ? src
-        : `${assetPublicPath}${src.charAt(0) === '/' ? src.slice(1) : src}`;
-      el.setAttribute('src', newSrc);
+      const newSrc = /^(https?\:)?\/\//.test(src) ? src : `${assetPublicPath}${src.charAt(0) === "/" ? src.slice(1) : src}`;
+      el.setAttribute("src", newSrc);
     });
     return appName;
   });

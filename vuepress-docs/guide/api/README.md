@@ -22,18 +22,11 @@ register(
 #### 参数说明
 
 ```ts
-type Entry = string | string[] | {
-  styles?: string[];
-  scripts?: string[];
-  html?: string;
-}
+type Entry = string | string[] | { styles?: string[]; scripts?: string[]; html?: string; }
 
 type MountContainer = HTMLElement | string;
 type Activity = string | RegExp | ActivityFn;
-type Block = {
-  path: string;
-  container?: MountContainer;
-}
+type Block = { path: string; container?: MountContainer; }
 type Rule = {
   rule: Activity;
   container?: MountContainer;
@@ -87,13 +80,8 @@ type StartOptions = {
   getPublicPath?(url: string, option?: ProcessUrlOption): string; // 获取资源相对路径
   getTemplate?(code: string): string; // 处理 html 内容
   remoteUrl?: string; // 远程微应用配置
-  [MidwareName.urlOption]?:
-    | ProcessUrlOption
-    | ((url: string) => ProcessUrlOption);
-  [MidwareName.proxyEntry]?(
-    entry: Entry,
-    appName: string
-  ): Entry | Promise<Entry>;
+  [MidwareName.urlOption]?: ProcessUrlOption | ((url: string) => ProcessUrlOption);
+  [MidwareName.proxyEntry]?(entry: Entry, appName: string): Entry | Promise<Entry>;
   [MidwareName.Sandbox]?: ISandbox;
   [MidwareName.Store]?: IStore;
   [MidwareName.start]?(...args: any[]): void;
@@ -111,32 +99,18 @@ use(handler: MidwareFn, options?: KeyObject<any>)
 #### 参数说明
 
 ```ts
-type MidwareFn = (
-  system: MidwareSystem,
-  microApps: IMicroApp[],
-  next: NextFn
-) => void;
-
+type MidwareFn = ( system: MidwareSystem, microApps: IMicroApp[], next: NextFn ) => void;
 type MidwareSystem {
   set(cfgName: MidwareName, cfgValue: any): void; // 设置流程节点的处理逻辑
   use(handler: MidwareFn, options?: KeyObject<any>): void; // 使用其他中间件
   setHook(hookName: SystemHookName, hook: SystemHookFn): void;
   cfgCount(cfgName: MidwareName): number;
   fileExtName(file: string): FileType | undefined; // 获取文件扩展名
-  fileFetch(
-    file: string | RequestInfo,
-    options?: KeyObject<any>,
-    appName?: string
-  ): Promise<any>;
+  fileFetch(file: string | RequestInfo, options?: KeyObject<any>, appName?: string ): Promise<any>;
   event: EventFn; // 绑定插件
   fire: TriggerFn; // 触发插件
   options: KeyObject<any>; // 中间件使用时，来自用户的配置项
 }
-type MidwareFn = (
-  system: MidwareSystem,
-  microApps: IMicroApp[],
-  next: NextFn,
-) => void;
 ```
 
 ### set
@@ -151,16 +125,8 @@ set(hook: HookFn, options?: KeyObject<any>)
 
 ```ts
 type HookFn = (system: PluginSystem) => void;
-
-type PluginSystem = {
-  event: EventFn;
-  options: KeyObject<any>;
-};
-type EventFn = (
-  evt: string,
-  fn: HandlerFn<DetailParam>,
-  once?: boolean
-) => void;
+type EventFn = (evt: string, fn: HandlerFn<DetailParam>, once?: boolean) => void;
+type PluginSystem = { event: EventFn; options: KeyObject<any> };
 ```
 
 ## 枚举值
@@ -169,12 +135,12 @@ type EventFn = (
 
 ```ts
 enum MicroAppStage {
-  NOT_ACTIVED = 'NOT_ACTIVED', // 未激活
-  ACTIVING = 'ACTIVING', // 激活中
-  ACTIVED = 'ACTIVED', // 已激活
-  NOT_RENDERED = 'NOT_RENDERED', // 未渲染
-  RENDERING = 'RENDERING', // 渲染中
-  RENDERED = 'RENDERED', // 已渲染
+  NOT_ACTIVED = "NOT_ACTIVED", // 未激活
+  ACTIVING = "ACTIVING", // 激活中
+  ACTIVED = "ACTIVED", // 已激活
+  NOT_RENDERED = "NOT_RENDERED", // 未渲染
+  RENDERING = "RENDERING", // 渲染中
+  RENDERED = "RENDERED", // 已渲染
 }
 ```
 
@@ -224,10 +190,10 @@ HistoryType {
 
 ```ts
 enum FileType {
-  HTML = 'html',
-  CSS = 'css',
-  JS = 'js',
-  JSON = 'json',
+  HTML = "html",
+  CSS = "css",
+  JS = "js",
+  JSON = "json",
 }
 ```
 
@@ -237,9 +203,9 @@ enum FileType {
 
 ```ts
 enum EndType {
-  PC = 'pc', // PC 端
-  H5 = 'h5', // 移动端
-  NONE = 'none', // 多端通配
+  PC = "pc", // PC 端
+  H5 = "h5", // 移动端
+  NONE = "none", // 多端通配
 }
 ```
 
