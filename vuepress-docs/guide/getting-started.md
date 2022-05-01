@@ -126,3 +126,10 @@ use((sys, apps, next) => {
 
 start();
 ```
+
+> 编辑该示例：[https://codepen.io/valleykid/pen/PoQopON](https://codepen.io/valleykid/pen/PoQopON)
+
+## 在线示例
+
+- satumjs × Vuejs-todo [https://codepen.io/valleykid/pen/LYQYWrK](https://codepen.io/valleykid/pen/LYQYWrK)
+- satumjs × Vite [https://stackblitz.com/edit/vitejs-vite-pl7bhf](https://stackblitz.com/edit/vitejs-vite-pl7bhf)
