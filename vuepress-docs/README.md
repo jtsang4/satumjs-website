@@ -52,7 +52,11 @@ import { start } from "@satumjs/core";
 start({ remoteUrl: "https://example.com/configs.json" });
 ```
 
-更多示例请参考：[https://github.com/satumjs/examples](https://github.com/satumjs/examples)
+更多**在线示例**:
+
+- satumjs x 老网站 [https://codepen.io/valleykid/pen/PoQopON](https://codepen.io/valleykid/pen/PoQopON)
+- satumjs × Vuejs-todo [https://codepen.io/valleykid/pen/LYQYWrK](https://codepen.io/valleykid/pen/LYQYWrK)
+- satumjs × Vite [https://stackblitz.com/edit/vitejs-vite-pl7bhf](https://stackblitz.com/edit/vitejs-vite-pl7bhf)
 
 # 社区
 
