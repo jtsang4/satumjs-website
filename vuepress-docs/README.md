@@ -58,6 +58,8 @@ start({ remoteUrl: "https://example.com/apps.json" });
 - satumjs × Vuejs-todo [https://codepen.io/valleykid/pen/LYQYWrK](https://codepen.io/valleykid/pen/LYQYWrK)
 - satumjs × Vite [https://stackblitz.com/edit/vitejs-vite-pl7bhf](https://stackblitz.com/edit/vitejs-vite-pl7bhf)
 
+<!-- <StackblitzDemo id="seeconf" entry="https://seeconf.antfin.com/" /> -->
+
 # 社区
 
 > 加我微信 `valleykid` 注明“satumjs”，加好友成功后会被拉入微信群。微信群二维码**不再更新**。

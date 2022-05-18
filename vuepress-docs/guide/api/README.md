@@ -75,6 +75,7 @@ type IgnoreFile = string | RegExp | IgnoreFileFn;
 type StartOptions = {
   prefetch?: boolean; // 预加载
   baseHistoryType?: BaseHistoryType;
+  embedStylesIntoTemplate?: boolean; // 是否预先把样式嵌入 template
   ignoreFileRule?: IgnoreFile | IgnoreFile[]; // 忽略加载的一些文件，如 cnzz 类的
   fetch?: typeof fetch; // 自定义获取远程内容
   getPublicPath?(url: string, option?: ProcessUrlOption): string; // 获取资源相对路径
