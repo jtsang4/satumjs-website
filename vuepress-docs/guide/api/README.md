@@ -90,6 +90,8 @@ type StartOptions = {
 
 ### use
 
+引入中间件。
+
 #### 用法
 
 ```ts
@@ -115,6 +117,8 @@ type MidwareSystem {
 
 ### set
 
+引入插件。
+
 #### 用法
 
 ```ts
@@ -127,6 +131,16 @@ set(hook: HookFn, options?: KeyObject<any>)
 type HookFn = (system: PluginSystem) => void;
 type EventFn = (evt: string, fn: HandlerFn<DetailParam>, once?: boolean) => void;
 type PluginSystem = { event: EventFn; options: KeyObject<any> };
+```
+
+### setHostHistory
+
+当基座具有路由系统时，协调基座路由与微应用路由。
+
+#### 用法
+
+```ts
+setHostHistory(rootHistory: KeyObject<any>, pathRules?: Array<{ rule: Activity; path: string }>)
 ```
 
 ## 枚举值
