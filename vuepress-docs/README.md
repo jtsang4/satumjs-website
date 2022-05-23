@@ -52,11 +52,19 @@ import { start } from "@satumjs/core";
 start({ remoteUrl: "https://example.com/apps.json" });
 ```
 
-更多**在线示例**:
+## 在线示例
 
-- satumjs × 老网站 [https://codepen.io/valleykid/pen/PoQopON](https://codepen.io/valleykid/pen/PoQopON)
-- satumjs × Vuejs-todo [https://codepen.io/valleykid/pen/LYQYWrK](https://codepen.io/valleykid/pen/LYQYWrK)
-- satumjs × Vite [https://stackblitz.com/edit/vitejs-vite-pl7bhf](https://stackblitz.com/edit/vitejs-vite-pl7bhf)
+- [无需适配代码，集成老网站](https://codepen.io/valleykid/pen/PoQopON)
+- [无需适配代码，集成 Vuejs-todo](https://codepen.io/valleykid/pen/LYQYWrK)
+
+<div></div>
+
+- [satumjs × Vite](https://stackblitz.com/edit/vitejs-vite-pl7bhf) <!-- | [playground/simple-vite](https://github.com/satumjs/playground/tree/master/simple-vite) -->
+- [入门: 集成简单的微应用](https://stackblitz.com/edit/github-gacap7) <!-- | [playground/simple-example](https://github.com/satumjs/playground/tree/master/simple-example) -->
+- [入门: 自定义中间件](https://stackblitz.com/edit/js-9dzksc) <!-- | [playground/simple-custom-midware](https://github.com/satumjs/playground/tree/master/simple-custom-midware) -->
+- [入门: 使用官方中间件](https://stackblitz.com/edit/js-xte5xe) <!-- | [playground/use-offical-midwares](https://github.com/satumjs/playground/tree/master/use-offical-midwares) -->
+- [入门: 集成自带生命周期的微应用](https://stackblitz.com/edit/js-lyqjyr) <!-- | [playground/use-app-with-lifecycles](https://github.com/satumjs/playground/tree/master/use-app-with-lifecycles) -->
+- [入门: 使用区块机制](https://stackblitz.com/edit/js-m2kkqn) <!-- | [playground/simple-block-example](https://github.com/satumjs/playground/tree/master/simple-block-example) -->
 
 # 社区
 
