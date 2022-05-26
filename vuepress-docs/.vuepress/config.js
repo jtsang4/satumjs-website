@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Satumjs',
+  title: 'SatumJS',
   description: 'A core of micro-frontends framework',
   base: '/website/',
   head: [
@@ -23,13 +23,13 @@ module.exports = {
   /* locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'Satumjs',
+      title: 'SatumJS',
       description: '面向未来更多场景的下一代微前端框架',
       selectText: '选择语言',
     },
     '/en/': {
       lang: 'en-US',
-      title: 'Satumjs',
+      title: 'SatumJS',
       description: 'Next-generation microf2e framework for more scenarios in the future',
       selectText: 'Languages',
     },

@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://gw.alipayobjects.com/mdn/rms_edced6/afts/img/A*KfcRTYnC4eoAAAAAAAAAAAAAARQnAQ
-tagLine: satumjs
+tagLine: SatumJS
 tagline: 💫 面向多实例集成、功能可插拔的微前端框架
 actionText: 快速上手 →
 actionLink: /guide/
@@ -19,7 +19,7 @@ features:
   - title: 无缝支持 Vite
     details: 官方提供的沙箱中间件，完整的沙箱能力无缝支持 Vite。
 
-footer: Satumjs ❤️ you
+footer: SatumJS ❤️ you
 ---
 
 # 📦 安装
@@ -59,7 +59,7 @@ start({ remoteUrl: "https://example.com/apps.json" });
 
 <div></div>
 
-- [satumjs × Vite](https://stackblitz.com/edit/vitejs-vite-pl7bhf) <!-- | [playground/simple-vite](https://github.com/satumjs/playground/tree/master/simple-vite) -->
+- [SatumJS × Vite](https://stackblitz.com/edit/vitejs-vite-pl7bhf) <!-- | [playground/simple-vite](https://github.com/satumjs/playground/tree/master/simple-vite) -->
 - [入门: 集成简单的微应用](https://stackblitz.com/edit/github-gacap7) <!-- | [playground/simple-example](https://github.com/satumjs/playground/tree/master/simple-example) -->
 - [入门: 自定义中间件](https://stackblitz.com/edit/js-9dzksc) <!-- | [playground/simple-custom-midware](https://github.com/satumjs/playground/tree/master/simple-custom-midware) -->
 - [入门: 使用官方中间件](https://stackblitz.com/edit/js-xte5xe) <!-- | [playground/use-offical-midwares](https://github.com/satumjs/playground/tree/master/use-offical-midwares) -->

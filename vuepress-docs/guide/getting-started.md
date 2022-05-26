@@ -2,13 +2,13 @@
 sidebarDepth: 2
 ---
 
-本文会帮助你从头搭建一个简单的 Satumjs 微前端应用。这个示例应用是为了集成老网站。
+本文会帮助你从头搭建一个简单的 SatumJS 微前端应用。这个示例应用是为了集成老网站。
 
 ## 项目初始化
 
 > 以下演示均使用 yarn 作为包安装工具，npm 等工具用法类似。
 
-Satum 对基座的技术栈没有任何限制，不过为了适配多个终端，不建议基座承载太多 UI 和逻辑。我们可以选用 `Parcel` 作为基座的构建工具。
+SatumJS 对基座的技术栈没有任何限制，不过为了适配多个终端，不建议基座承载太多 UI 和逻辑。我们可以选用 `Parcel` 作为基座的构建工具。
 
 1. 创建并进入一个新目录
 
@@ -131,5 +131,5 @@ start();
 
 ## 在线示例
 
-- satumjs × Vuejs-todo [https://codepen.io/valleykid/pen/LYQYWrK](https://codepen.io/valleykid/pen/LYQYWrK)
-- satumjs × Vite [https://stackblitz.com/edit/vitejs-vite-pl7bhf](https://stackblitz.com/edit/vitejs-vite-pl7bhf)
+- SatumJS × Vuejs-todo [https://codepen.io/valleykid/pen/LYQYWrK](https://codepen.io/valleykid/pen/LYQYWrK)
+- SatumJS × Vite [https://stackblitz.com/edit/vitejs-vite-pl7bhf](https://stackblitz.com/edit/vitejs-vite-pl7bhf)
