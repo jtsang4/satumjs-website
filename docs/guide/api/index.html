@@ -22,7 +22,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     
-    <link rel="preload" href="/website/assets/css/0.styles.4bd236d5.css" as="style"><link rel="preload" href="/website/assets/js/app.f3c139a8.js" as="script"><link rel="preload" href="/website/assets/js/2.e052040b.js" as="script"><link rel="preload" href="/website/assets/js/12.6e84c8a2.js" as="script"><link rel="prefetch" href="/website/assets/js/10.b4cce217.js"><link rel="prefetch" href="/website/assets/js/11.71302970.js"><link rel="prefetch" href="/website/assets/js/13.847f85b2.js"><link rel="prefetch" href="/website/assets/js/14.cca8bde1.js"><link rel="prefetch" href="/website/assets/js/15.0079787d.js"><link rel="prefetch" href="/website/assets/js/16.f1990e01.js"><link rel="prefetch" href="/website/assets/js/17.1c8c9e1b.js"><link rel="prefetch" href="/website/assets/js/18.ced60cfe.js"><link rel="prefetch" href="/website/assets/js/19.feddf6ca.js"><link rel="prefetch" href="/website/assets/js/3.43b3f7e5.js"><link rel="prefetch" href="/website/assets/js/4.6930a0a4.js"><link rel="prefetch" href="/website/assets/js/5.ca68d0b7.js"><link rel="prefetch" href="/website/assets/js/6.b17b4cd0.js"><link rel="prefetch" href="/website/assets/js/7.8bc97a0f.js"><link rel="prefetch" href="/website/assets/js/8.943d23ff.js"><link rel="prefetch" href="/website/assets/js/9.25b52e38.js">
+    <link rel="preload" href="/website/assets/css/0.styles.4bd236d5.css" as="style"><link rel="preload" href="/website/assets/js/app.f6accab0.js" as="script"><link rel="preload" href="/website/assets/js/2.e052040b.js" as="script"><link rel="preload" href="/website/assets/js/12.a221cce7.js" as="script"><link rel="prefetch" href="/website/assets/js/10.be6234de.js"><link rel="prefetch" href="/website/assets/js/11.daefa5de.js"><link rel="prefetch" href="/website/assets/js/13.2eb68097.js"><link rel="prefetch" href="/website/assets/js/14.f0ca89bc.js"><link rel="prefetch" href="/website/assets/js/15.45d28579.js"><link rel="prefetch" href="/website/assets/js/16.aacbd871.js"><link rel="prefetch" href="/website/assets/js/17.5260b661.js"><link rel="prefetch" href="/website/assets/js/18.a92813b6.js"><link rel="prefetch" href="/website/assets/js/19.f59bb73a.js"><link rel="prefetch" href="/website/assets/js/3.43b3f7e5.js"><link rel="prefetch" href="/website/assets/js/4.6930a0a4.js"><link rel="prefetch" href="/website/assets/js/5.ca68d0b7.js"><link rel="prefetch" href="/website/assets/js/6.1d07d6ff.js"><link rel="prefetch" href="/website/assets/js/7.8bc97a0f.js"><link rel="prefetch" href="/website/assets/js/8.f928f4bb.js"><link rel="prefetch" href="/website/assets/js/9.b9f49694.js">
     <link rel="stylesheet" href="/website/assets/css/0.styles.4bd236d5.css">
   </head>
   <body>
@@ -62,11 +62,11 @@
   entry<span class="token operator">?</span><span class="token operator">:</span> Entry<span class="token punctuation">;</span>
   rules<span class="token operator">?</span><span class="token operator">:</span> Rule <span class="token operator">|</span> Rule<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
   history<span class="token operator">?</span><span class="token operator">:</span> HistoryType<span class="token punctuation">;</span>
-  <span class="token comment">// 此处声明的变量，均可在 window 对象上访问</span>
+  <span class="token comment">// 此处声明的变量，均可在微应用的 window 对象上访问</span>
   shareProps<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    externals<span class="token operator">?</span><span class="token operator">:</span> KeyObject<span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">&gt;</span><span class="token punctuation">;</span> <span class="token comment">// 通过布局/区块形成的依赖链，共享三方库</span>
-    globals<span class="token operator">?</span><span class="token operator">:</span> KeyObject<span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">&gt;</span><span class="token punctuation">;</span> <span class="token comment">// 通过依赖链，微应用之间共享数据</span>
-    statics<span class="token operator">?</span><span class="token operator">:</span> KeyObject<span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">&gt;</span><span class="token punctuation">;</span> <span class="token comment">// 配置微应用中使用的静态数据</span>
+    externals<span class="token operator">?</span><span class="token operator">:</span> KeyObject<span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">&gt;</span><span class="token punctuation">;</span> <span class="token comment">// 通过嵌套关系形成依赖链，微应用之间共享三方库如 React</span>
+    globals<span class="token operator">?</span><span class="token operator">:</span> KeyObject<span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">&gt;</span><span class="token punctuation">;</span> <span class="token comment">// 通过依赖链，微应用之间共享数据，该数据在取时查询依赖链</span>
+    statics<span class="token operator">?</span><span class="token operator">:</span> KeyObject<span class="token operator">&lt;</span><span class="token builtin">any</span><span class="token operator">&gt;</span><span class="token punctuation">;</span> <span class="token comment">// 配置该微应用内使用的静态数据</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
   extra<span class="token operator">?</span><span class="token operator">:</span> MicroAppConfig<span class="token punctuation">;</span>
 
@@ -169,6 +169,6 @@
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/website/assets/js/app.f3c139a8.js" defer></script><script src="/website/assets/js/2.e052040b.js" defer></script><script src="/website/assets/js/12.6e84c8a2.js" defer></script>
+    <script src="/website/assets/js/app.f6accab0.js" defer></script><script src="/website/assets/js/2.e052040b.js" defer></script><script src="/website/assets/js/12.a221cce7.js" defer></script>
   </body>
 </html>

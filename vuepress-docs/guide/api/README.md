@@ -40,11 +40,11 @@ type TMicroApp {
   entry?: Entry;
   rules?: Rule | Rule[];
   history?: HistoryType;
-  // 此处声明的变量，均可在 window 对象上访问
+  // 此处声明的变量，均可在微应用的 window 对象上访问
   shareProps?: {
-    externals?: KeyObject<any>; // 通过布局/区块形成的依赖链，共享三方库
-    globals?: KeyObject<any>; // 通过依赖链，微应用之间共享数据
-    statics?: KeyObject<any>; // 配置微应用中使用的静态数据
+    externals?: KeyObject<any>; // 通过嵌套关系形成依赖链，微应用之间共享三方库如 React
+    globals?: KeyObject<any>; // 通过依赖链，微应用之间共享数据，该数据在取时查询依赖链
+    statics?: KeyObject<any>; // 配置该微应用内使用的静态数据
   };
   extra?: MicroAppConfig;
 
