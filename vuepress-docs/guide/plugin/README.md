@@ -8,8 +8,6 @@ sidebarDepth: 2
 - `fileOriginSource`: 文件内容获取后触发
 - `fileMicroSource`: 文件内容改写后触发
 - `fileCacheInfo`: 文件被缓存后触发
-- `currentAppChains`: url 变化时，重新计算**微应用依赖链**后触发
-- `currentAppRequests`: 微应用执行加载时触发，所有请求都会在 `requests` 里罗列
 
 <div></div>
 
@@ -21,9 +19,15 @@ sidebarDepth: 2
 
 <div></div>
 
+- `currentAppChains`: url 变化时，重新计算**微应用依赖链**后触发
+- `currentAppRequests`: 微应用执行加载时触发，所有请求都会在 `requests` 里罗列
+- `printForDebug`: 开发时调试信息埋点，目前包含**全局事件、actorSystem 数据、路由信息**等
+
+<div></div>
+
 ## `TimingHookName` 性能相关的钩子
 
-数据格式: `{ appName, actorId, time }`
+数据格式: `{ url, appName?, actorId?, time }`
 
 - `scheduleSystemStart`: 调度系统启动，即 `start` 方法执行时
 - `scheduleCycleStart`: URL 变化时，调度周期开始

@@ -13,6 +13,7 @@ sidebarDepth: 2
 - `simpleCssScopeMidware` 简单的 css scope 实现，会处理 css 规则增加 scope
 - `mountNodeMidware` 获取挂载 dom 节点，会响应 dom 变化，直到成功获取
 - `interceptorMidware` vue/react 路由协调，会为不同的微应用分发不同的路径
+- `imageUrlCompleteMidware` css 和页面中的图片相对路径自动补全
 
 ## @satumjs/midware-single-spa
 

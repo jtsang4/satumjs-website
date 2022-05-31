@@ -27,6 +27,6 @@ sidebarDepth: 2
 
 > `@satumjs/simple-midwares > simpleSandboxMidware`、`@satumjs/simple-midwares > mountNodeMidware` 和 `@satumjs/midware-single-spa`，强烈建议成为项目标配。
 
-> 另外，如果子应用都有独立的路由，强烈建议使用 `@satumjs/midware-microcode` 及 `@satumjs/simple-midwares > interceptorMidware` 或 `@satumjs/midware-interceptor`。
+> 另外，如果子应用都有独立的路由，强烈建议使用 `@satumjs/simple-midwares > interceptorMidware` 或 `@satumjs/midware-interceptor`。
 
 ## 其他

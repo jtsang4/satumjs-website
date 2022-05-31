@@ -13,7 +13,7 @@ sidebarDepth: 2
 - `布局微应用`：如果微应用的激活规则中包含 `layout`，则以路径获得的其他微应用；
 - `区块微应用`：如果微应用的激活规则中包含 `blocks`，则以路径获得的其他微应用；
 - `数据共享`：目前数据共享由 `shareProps` 配置，且需要通过 window 对象。其他共享方式规划中；
-- `路由协调`：依赖中间件 `@satumjs/midware-microcode` 及 `@satumjs/simple-midwares > interceptorMidware` 或者 `@satumjs/midware-interceptor`；
+- `路由协调`：依赖中间件`@satumjs/simple-midwares > interceptorMidware` 或者 `@satumjs/midware-interceptor`；
 
 ## 工程生态视角
 
