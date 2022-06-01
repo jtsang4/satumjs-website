@@ -6,7 +6,7 @@ sidebarDepth: 2
 
 [https://www.npmjs.com/package/@satumjs/simple-midwares](https://www.npmjs.com/package/@satumjs/simple-midwares)
 
-一些简单中间件的实现集合。包含了对**缓存、沙箱、css 隔离、获取挂载 dom、路由协调**的实现。
+一些简单中间件集合。包含**缓存、沙箱、样式隔离、获取挂载点、路由协调、图片路径自动补全**等实现。
 
 - `simpleCacheMidware` 简单的文件内容缓存，会缓存获取过的 js/css 文件内容
 - `simpleSandboxMidware` 简单的沙箱，会执行微应用的脚本
