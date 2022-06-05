@@ -74,7 +74,7 @@ start(options?: StartOptions)
 type IgnoreFile = string | RegExp | IgnoreFileFn;
 type StartOptions = {
   prefetch?: boolean; // 预加载
-  baseHistoryType?: BaseHistoryType;
+  hostHistoryType?: HostHistoryType;
   ignoreFileRule?: IgnoreFile | IgnoreFile[]; // 忽略加载的一些文件，如 cnzz 类的
   fetch?: typeof fetch; // 自定义获取远程内容
   getPublicPath?(url: string, option?: ProcessUrlOption): string; // 获取资源相对路径
@@ -106,6 +106,7 @@ type MidwareSystem {
   set(cfgName: MidwareName, cfgValue: any): void; // 设置流程节点的处理逻辑
   use(handler: MidwareFn, options?: KeyObject<any>): void; // 使用其他中间件
   setHook(hookName: SystemHookName, hook: SystemHookFn): void;
+  evtCount(evtName: string): number;
   cfgCount(cfgName: MidwareName): number;
   fileExtName(file: string): FileType | undefined; // 获取文件扩展名
   fileFetch(file: string | RequestInfo, options?: KeyObject<any>, appName?: string ): Promise<any>;
@@ -130,7 +131,7 @@ set(hook: HookFn, options?: KeyObject<any>)
 ```ts
 type HookFn = (system: PluginSystem) => void;
 type EventFn = (evt: string, fn: HandlerFn<DetailParam>, once?: boolean) => void;
-type PluginSystem = { event: EventFn; options: KeyObject<any> };
+type PluginSystem = { event: EventFn; evtCount(evtName: string): number; options: KeyObject<any> };
 ```
 
 ### setHostHistory
