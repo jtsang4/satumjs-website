@@ -44,6 +44,7 @@ module.exports = {
     nav: [
       { text: '文档', link: '/guide/' },
       { text: '示例', link: '/examples' },
+      { text: '更新日志', link: '/changelog' },
     ],
     sidebar: {
       '/guide': [{
