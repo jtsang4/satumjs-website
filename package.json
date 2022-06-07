@@ -4,10 +4,10 @@
   "description": "an offical website for satumjs",
   "main": "index.js",
   "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.9.7",
-    "@vuepress/plugin-medium-zoom": "^1.9.7",
-    "markdown-it-imsize": "^2.0.1",
-    "vuepress": "^1.9.7"
+    "@vuepress/plugin-back-to-top": "1.9.7",
+    "@vuepress/plugin-medium-zoom": "1.9.7",
+    "markdown-it-imsize": "2.0.1",
+    "vuepress": "1.9.7"
   },
   "scripts": {
     "dev": "vuepress dev vuepress-docs",

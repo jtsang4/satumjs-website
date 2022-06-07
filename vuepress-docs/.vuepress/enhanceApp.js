@@ -1,7 +1,8 @@
 export default ({ router }) => {
   // 路由切换
   router.beforeEach((to, _, next) => {
-    const ignoreDomain = (window.ignoreDomains || []).some(domain => location.hostname.includes(domain));
+    const ignoreDomains = typeof window !== 'undefined' ? (window.ignoreDomains || []) : []
+    const ignoreDomain = ignoreDomains.some(domain => location.hostname.includes(domain));
     if (typeof _hmt !== 'undefined' && to.path) {
       if (ignoreDomain) {
         console.log('[百度统计]', to.fullPath);
