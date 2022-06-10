@@ -1,4 +1,5 @@
 ---
+title: 示例
 sidebarDepth: 2
 sidebar: auto
 ---

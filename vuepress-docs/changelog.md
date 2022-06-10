@@ -1,4 +1,5 @@
 ---
+title: 更新日志
 sidebarDepth: 2
 sidebar: auto
 ---

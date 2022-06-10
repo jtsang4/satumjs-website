@@ -1,4 +1,5 @@
 ---
+title: plugin-文档说明
 sidebarDepth: 2
 ---
 

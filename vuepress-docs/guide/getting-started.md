@@ -1,4 +1,5 @@
 ---
+title: guide-快速上手
 sidebarDepth: 2
 ---
 
