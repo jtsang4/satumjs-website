@@ -6,21 +6,22 @@ module.exports = {
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { href: 'https://gw.alipayobjects.com/mdn/rms_edced6/afts/img/A*KfcRTYnC4eoAAAAAAAAAAAAAARQnAQ', type: 'image/x-icon', rel: 'shortcut icon' }],
-    // 51.la
-    ['script', { charset: 'UTF-8', id: 'LA_COLLECT', src: 'https://sdk.51.la/js-sdk-pro.min.js' }],
-    ['script', {}, 'if(typeof LA !=="undefined") LA.init({id:"JiS3PZJqUNXw6wVQ",ck:"JiS3PZJqUNXw6wVQ",autoTrack:true,hashMode:true})'],
-    // 插入百度统计代码
+    ['link', {
+      href: 'https://gw.alipayobjects.com/mdn/rms_edced6/afts/img/A*KfcRTYnC4eoAAAAAAAAAAAAAARQnAQ',
+      type: 'image/x-icon',
+      rel: 'shortcut icon'
+    }],
     ['script', {}, `
-      var ignoreDomains = ['localhost', '127.0.0.1', '0.0.0.0'];
-      var _hmt = _hmt || [];
-      (function() {
-        if (ignoreDomains.some(function(domain) { return location.hostname.includes(domain) })) return;
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?ff1ee4d80feed24efd13ed94ef4722fe";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
+var ignoreDomains = ["localhost", "127.0.0.1", "0.0.0.0"];
+var currentDomainIsIgnored = ignoreDomains.some(function(domain){return location.hostname.indexOf(domain)!==-1});
+
+if (!currentDomainIsIgnored) {
+  // 插入 51la 统计代码
+  !function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JiS3PZJqUNXw6wVQ",ck:"JiS3PZJqUNXw6wVQ",autoTrack:true,hashMode:true});
+
+  // 插入百度统计代码
+  var _hmt=_hmt||[];!function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?ff1ee4d80feed24efd13ed94ef4722fe";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)}();
+}
     `],
   ],
   /* locales: {
