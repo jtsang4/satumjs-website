@@ -26,8 +26,7 @@ sidebarDepth: 2
 - `event()`/`fire()`：可在中间件中提供自定义插件，或响应其他插件
 - `options`：中间件使用时，来自用户的配置项
 
-> `@satumjs/simple-midwares > simpleSandboxMidware`、`@satumjs/simple-midwares > mountNodeMidware` 和 `@satumjs/midware-single-spa`，强烈建议成为项目标配。
-
-> 另外，如果子应用都有独立的路由，强烈建议使用 `@satumjs/simple-midwares > interceptorMidware` 或 `@satumjs/midware-interceptor`。
+> 强烈建议把 [sandbox](/guide/midware/offical-midwares.html#satumjs-simple-midwares)、[mountNode](/guide/midware/offical-midwares.html#satumjs-simple-midwares) 和 [midware-single-spa](/guide/midware/offical-midwares.html#satumjs-midware-single-spa) 置为项目标配。<br>
+> 另外，若微应用包含独立路由，建议使用 [interceptor](/guide/midware/offical-midwares.html#satumjs-simple-midwares) 或者 [midware-interceptor](/guide/midware/offical-midwares.html#satumjs-midware-interceptor) 协调路由。
 
 ## 其他
