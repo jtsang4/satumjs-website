@@ -22,6 +22,15 @@ sidebarDepth: 2
 - mountNodeMidware: 获取挂载 dom 节点，会响应 dom 变化，直到成功获取
 - interceptorMidware: vue/react 路由拦截器，会为不同的微应用分发不同的路径
 
+## @satumjs/midware-proxy-sandbox
+
+[https://www.npmjs.com/package/@satumjs/midware-proxy-sandbox](https://www.npmjs.com/package/@satumjs/midware-proxy-sandbox)
+
+基于 Proxy 实现的沙箱中间件，目前与 simple-midwares 中的沙箱功能一致。<br>欢迎社区感兴趣的同学一起持续增强该沙箱。
+
+- `docVariable`: (k: string, proxyDoc: Object, document: Document) => any.
+- `winVariable`: (k: string, proxyWin: Object, window: Window) => any.
+
 ## @satumjs/midware-single-spa
 
 [https://www.npmjs.com/package/@satumjs/midware-single-spa](https://www.npmjs.com/package/@satumjs/midware-single-spa)
