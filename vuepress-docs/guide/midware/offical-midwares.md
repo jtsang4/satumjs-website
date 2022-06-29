@@ -49,6 +49,12 @@ sidebarDepth: 2
 
 基于 [x-qiankun](https://www.npmjs.com/package/@satumjs/x-qiankun) 包实现，完全借用了 `qiankun` 的沙箱能力。
 
+- `scopedCSS`: 同 `qiankun` 的配置
+- `useLooseSandbox`: 同 `qiankun` 中的 loose 设置
+- `useQiankunStart`: 是否使用 `qiankun` 中依赖的 `single-spa` 的 start
+- `urlRerouteOnly`: 同 `single-spa` 的配置
+- `mergeWinProperty(fakeWin: Object, window: Window): void`: 通过增删改 fakeWin 对象上的属性，改写沙箱 window 的属性
+
 ## @satumjs/midware-sandbox
 
 [https://www.npmjs.com/package/@satumjs/midware-sandbox](https://www.npmjs.com/package/@satumjs/midware-sandbox)
