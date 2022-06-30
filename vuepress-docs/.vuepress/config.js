@@ -78,6 +78,12 @@ var _hmt=_hmt||[];!function(){if(currentDomainIsIgnored) return;var hm=document.
         children: [
           { title: '文档说明', path: '/guide/plugin/' },
         ],
+      }, {
+        title: '工具',
+        collapsable: false,
+        children: [
+          { title: '工具包', path: '/guide/tool/' },
+        ],
       }],
     },
   },
