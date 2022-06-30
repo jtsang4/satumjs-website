@@ -26,7 +26,7 @@ sidebar: auto
 - [自定义中间件](https://github.com/satumjs/examples/tree/master/custom-midware)，定义一款中间件，轻松改进*加载应用流程中*的一些返回值。[在线示例](https://stackblitz.com/edit/js-9dzksc)
 - [多入口文件](https://github.com/satumjs/examples/tree/master/multiple-entries)，支持多入口文件，如果数组中包含多个 html，则会将多个 html 文件内容会融合到最后一个 html 中作为真正的入口模板。
 - [多应用同时激活&一个应用同时多次激活]，配置相关依赖，使复杂场景正常渲染。
-- [跨应用共享组件]，做到应用间 UI 共享，提升重用性。
+- [跨应用共享组件](https://github.com/satumjs/playground/tree/master/simple-share-component)，做到应用间 UI 共享，提升重用性。
 - [三方库共享](https://github.com/satumjs/playground/tree/master/simple-share-third-library)，应用间共享三方库，减少重复加载。[在线示例](https://stackblitz.com/edit/github-vfvwg3)
 - vite 支持示例
   - [vite 单例模式](https://github.com/satumjs/examples/tree/master/vite/simple-via-singleton-mode)，通过单例模式支持加载 vite 项目。
